@@ -48,7 +48,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Picasso.with(context).load(imageUrl).into(holder.imageView);
 
         holder.tvTitle.setText(a.getTitle());
-        holder.tvAuthor.setText(a.getAuthor());
         holder.tvSource.setText(a.getSource().getName());
         holder.tvDate.setText("\u2022"+dateTime(a.getPublishedAt()));
 
@@ -85,7 +84,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvSource = itemView.findViewById(R.id.tvSource);
             tvDate = itemView.findViewById(R.id.tvDate);
-            tvAuthor = itemView.findViewById(R.id.tvAuthor);
+           tvAuthor = itemView.findViewById(R.id.tvAuthor);
             imageView = itemView.findViewById(R.id.image);
             cardView = itemView.findViewById(R.id.cardView);
 
