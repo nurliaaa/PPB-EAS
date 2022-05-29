@@ -26,6 +26,7 @@
             android:text="Nea Apps"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
         <Button
             android:layout_width="16dp"
             android:layout_height="16dp"
@@ -67,11 +68,11 @@
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/background"
+            android:layout_row="0"
             android:layout_column="1"
-            android:paddingRight="20dp"
+            android:backgroundTint="@color/orange"
             android:drawableRight="@drawable/ic_search_black_24dp"
-            android:layout_row="0" />
+            android:paddingRight="20dp" />
 
 
     </GridLayout>
@@ -90,5 +91,7 @@
             android:layout_marginTop="5dp" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
 </LinearLayout>

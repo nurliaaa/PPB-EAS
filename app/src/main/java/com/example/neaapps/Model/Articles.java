@@ -33,6 +33,7 @@ public class Articles {
         this.url = url;
     }
 
+
     @SerializedName("urlToImage")
     @Expose
     private String urlToImage;

@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 public class Detail extends AppCompatActivity {
 
-    TextView tvTitle,tvSource,tvTime,tvDesc;
+    TextView tvTitle,tvSource,tvTime,tvDesc, tvAuthor;
     ImageView imageView;
     WebView webView;
     ProgressBar loader;
@@ -28,6 +28,7 @@ public class Detail extends AppCompatActivity {
         tvTitle = findViewById(R.id.tvTitle);
         tvSource = findViewById(R.id.tvSource);
         tvTime = findViewById(R.id.tvDate);
+        tvAuthor = findViewById(R.id.tvAuthor);
         tvDesc = findViewById(R.id.tvDesc);
 
         imageView = findViewById(R.id.imageView);
@@ -41,6 +42,7 @@ public class Detail extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String source = intent.getStringExtra("source");
         String time = intent.getStringExtra("time");
+        String author = intent.getStringExtra("author");
         String desc = intent.getStringExtra("desc");
         String imageUrl = intent.getStringExtra("imageUrl");
         String url = intent.getStringExtra("url");
@@ -48,6 +50,7 @@ public class Detail extends AppCompatActivity {
 
         tvTitle.setText(title);
         tvSource.setText(source);
+        tvAuthor.setText(author);
         tvTime.setText(time);
         tvDesc.setText(desc);
 

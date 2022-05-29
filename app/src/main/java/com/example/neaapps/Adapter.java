@@ -40,7 +40,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 
-
         final Articles a = articles.get(position);
 
         String imageUrl = a.getUrlToImage();
@@ -49,6 +48,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Picasso.with(context).load(imageUrl).into(holder.imageView);
 
         holder.tvTitle.setText(a.getTitle());
+        holder.tvAuthor.setText(a.getAuthor());
         holder.tvSource.setText(a.getSource().getName());
         holder.tvDate.setText("\u2022"+dateTime(a.getPublishedAt()));
 
@@ -57,6 +57,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(context,Detail.class);
                 intent.putExtra("title",a.getTitle());
+                intent.putExtra("author", a.getAuthor());
                 intent.putExtra("source",a.getSource().getName());
                 intent.putExtra("time",dateTime(a.getPublishedAt()));
                 intent.putExtra("desc",a.getDescription());
@@ -74,7 +75,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTitle,tvSource,tvDate;
+        TextView tvTitle,tvSource,tvDate, tvAuthor;
         ImageView imageView;
         CardView cardView;
 
@@ -84,6 +85,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvSource = itemView.findViewById(R.id.tvSource);
             tvDate = itemView.findViewById(R.id.tvDate);
+            tvAuthor = itemView.findViewById(R.id.tvAuthor);
             imageView = itemView.findViewById(R.id.image);
             cardView = itemView.findViewById(R.id.cardView);
 

@@ -13,40 +13,50 @@
         app:cardElevation="4dp"
         app:cardCornerRadius="6dp">
 
-
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">
 
             <ProgressBar
+                android:id="@+id/loader"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:id="@+id/loader"/>
+                android:layout_marginRight="40dp" />
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="match_parent"
+                android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop" />
 
 
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient"/>
+<!--            <ImageView-->
+<!--                android:layout_width="184dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/gradient" />-->
 
             <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TITLE"
-                android:padding="10dp"
-                android:textSize="20dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:textColor="@color/white"
-                android:id="@+id/tvTitle"/>
+                android:layout_marginLeft="190dp"
+                android:text="TITLE"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="155dp"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="Source"
+                android:textColor="@color/black"
+                android:textSize="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,22 +66,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Source"
-                    android:textSize="15dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:textColor="@color/white"
-                    android:id="@+id/tvSource"/>
-
-                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="5 hour ago"
                     android:gravity="right"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:id="@+id/tvDate"/>
             </LinearLayout>
         </FrameLayout>
